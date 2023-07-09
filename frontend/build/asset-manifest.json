@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.67865feb.css",
-    "main.js": "/static/js/main.67fb9f27.js",
+    "main.css": "/static/css/main.b7f83b05.css",
+    "main.js": "/static/js/main.ad2f087f.js",
     "static/js/787.2df4b1c8.chunk.js": "/static/js/787.2df4b1c8.chunk.js",
     "static/media/Inter-Medium.woff": "/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/static/media/Inter-Black.c6938660eec019fefd68.woff",
     "static/media/Inter-Regular.woff": "/static/media/Inter-Regular.8c206db99195777c6769.woff",
     "static/media/Inter-Medium.woff2": "/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
     "static/media/Inter-Black.woff2": "/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
-    "static/media/Inter-Regular.woff2": "/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
-    "static/media/VectorLogo.svg": "/static/media/VectorLogo.bbe2a6eafac19c3d031c272c424875ca.svg",
-    "static/media/VectorHeart.svg": "/static/media/VectorHeart.1ad06e85f169668a1f36.svg",
-    "static/media/UnionRed.svg": "/static/media/UnionRed.d0f413bf3805a1fd4973010d44b06f2f.svg",
+    "static/media/profile-image.png": "/static/media/profile-image.a2b259fe5b2f40a7a365.png",
+    "static/media/header-logo.svg": "/static/media/header-logo.03b78ada3425e9132ff3db7ea8f4a6f6.svg",
+    "static/media/like-button.svg": "/static/media/like-button.87ed371465c7a6a1cd01.svg",
+    "static/media/fail-icon.svg": "/static/media/fail-icon.7c6a020bec681932a2af92e04114a848.svg",
     "index.html": "/index.html",
-    "static/media/Trash.svg": "/static/media/Trash.ce3b64935accf9b8212e.svg",
-    "static/media/UnionBlack.svg": "/static/media/UnionBlack.a9eb6caf1da3ff48b215fb1dd9477d74.svg",
-    "static/media/UnionHeart.svg": "/static/media/UnionHeart.35948469632d0421d697.svg",
-    "static/media/VectorEdit.svg": "/static/media/VectorEdit.6c7bf05444b9793fdf6e.svg",
-    "static/media/CloseIcon.svg": "/static/media/CloseIcon.039f1f5203f653b4bacd.svg",
-    "static/media/VectorAddButton.svg": "/static/media/VectorAddButton.bed8c136e13907f5eefb.svg",
-    "main.67865feb.css.map": "/static/css/main.67865feb.css.map",
-    "main.67fb9f27.js.map": "/static/js/main.67fb9f27.js.map",
+    "static/media/delete-button.svg": "/static/media/delete-button.823b0cf1b0b7e9cb7cad.svg",
+    "static/media/success-icon.svg": "/static/media/success-icon.1b6082f862eac35e2514460237d96ecc.svg",
+    "static/media/like-button-active.svg": "/static/media/like-button-active.fe17a515669479b1e649.svg",
+    "static/media/profile-edit-button.svg": "/static/media/profile-edit-button.8667ac4a523e8fc42e59.svg",
+    "static/media/avatar-change.svg": "/static/media/avatar-change.a086f758840ae814ecde.svg",
+    "static/media/close-icon.svg": "/static/media/close-icon.2ceb783afbab75916ddc.svg",
+    "static/media/add-photo-btn.svg": "/static/media/add-photo-btn.d86bb2edc2f6eadb96b7.svg",
+    "main.b7f83b05.css.map": "/static/css/main.b7f83b05.css.map",
+    "main.ad2f087f.js.map": "/static/js/main.ad2f087f.js.map",
     "787.2df4b1c8.chunk.js.map": "/static/js/787.2df4b1c8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.67865feb.css",
-    "static/js/main.67fb9f27.js"
+    "static/css/main.b7f83b05.css",
+    "static/js/main.ad2f087f.js"
   ]
 }

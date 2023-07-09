@@ -1,9 +1,14 @@
-export const BASE_URL = 'http://localhost:3000';
-// export const BASE_URL = "api.shishkinovich.nomoredomains.work";
+// export const BASE_URL = 'http://localhost:3000';
+// export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = "https://api.shishkinovich.nomoredomains.work";
 
 
-const checkResponse = (response) =>
-  response.ok ? response.json() : Promise.reject(`Ошибка ${response.status}`);
+function getServerReply(res) {
+  if (res.ok) {
+    return res.json();
+  }
+  return Promise.reject(`Ошибка: ${res.status}`);
+}
 
 
 export const register = (email, password) => {
@@ -15,12 +20,13 @@ export const register = (email, password) => {
       'Accept': 'application/json',
     },
     body: JSON.stringify({ email, password }),
-  }).then(checkResponse);
+  }).then(getServerReply);
 };
 
-export const authorize = (email, password) => {
+export const login = (email, password) => {
   return fetch(`${BASE_URL}/signin`, {
     method: 'POST',
+    //записываются в приложение куки
     credentials: 'include',
     headers: {
       'Accept': 'application/json',
@@ -29,7 +35,8 @@ export const authorize = (email, password) => {
     body: JSON.stringify({ email, password }),
     sameSite: 'none',
   })
-    .then(checkResponse)
+    .then(getServerReply)
+
 };
 
 export const checkToken = () => {
@@ -37,7 +44,8 @@ export const checkToken = () => {
     method: 'GET',
     credentials: 'include',
     headers: {
+      // 'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
-  }).then(checkResponse);
+  }).then(getServerReply);
 };
