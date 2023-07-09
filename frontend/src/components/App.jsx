@@ -188,7 +188,7 @@ function App() {
         .then((res) => {
           setIsLoggedIn(true);
           setEmail(res.email);
-          navigate('/');
+          navigate('/', { replace: true });
         })
         .catch((err) => {
           console.log('Неправильные данные');
@@ -197,10 +197,13 @@ function App() {
     }
   },
     []);
+  // [navigate]);
 
   // Получение данных текущего пользователя и начальных карточек
   useEffect(() => {
-    if (isLoggedIn) {
+    const userId = localStorage.getItem('userId');
+    // if (isLoggedIn) 
+    if (userId) {
       api.getMyInfo()
         .then((data) => {
           setCurrentUser(data)
@@ -209,10 +212,12 @@ function App() {
     }
   },
     // [isLoggedIn]);
-    [isLoggedIn, navigate]);
+    [navigate]);
 
   useEffect(() => {
-    if (isLoggedIn) {
+    // if (isLoggedIn) 
+    const userId = localStorage.getItem('userId');
+    if (userId) {
       api.getServerCards()
         .then((cards) => {
           setCards(cards);
@@ -221,8 +226,7 @@ function App() {
     }
   },
     // [isLoggedIn])
-    [isLoggedIn, navigate]);
-
+    [navigate]);
 
 
   return (

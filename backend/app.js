@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const rateLimit = require('express-rate-limit');
+// const rateLimit = require('express-rate-limit');
 const routes = require('./routes/index');
 const errorHandler = require('./middlewares/errorHandler');
 const { createUser, login } = require('./controllers/users');
@@ -28,10 +28,10 @@ app.use(cors({
   optionsSuccessStatus: 204,
 }));
 
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // за 15 минут
-  max: 100, // можно совершить максимум 100 запросов с одного IP
-});
+// const limiter = rateLimit({
+//   windowMs: 15 * 60 * 1000, // за 15 минут
+//   max: 100, // можно совершить максимум 100 запросов с одного IP
+// });
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
   useNewUrlParser: true,
@@ -39,7 +39,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
 
 app.use(express.json());
 app.use(cookieParser());
-const { PORT = 3001 } = process.env;
+const { PORT = 3000 } = process.env;
 
 app.use(requestLogger);
 
@@ -52,7 +52,7 @@ app.get('/crash-test', () => {
 app.post('/signup', validateSignUp, createUser);
 app.post('/signin', validateSignIn, login);
 
-app.use(limiter);
+// app.use(limiter);
 
 app.use(routes);
 
