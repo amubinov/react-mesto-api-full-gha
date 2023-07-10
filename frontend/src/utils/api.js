@@ -1,4 +1,3 @@
-import { BASE_URL } from "./auth";
 
 export class Api {
     constructor(options) {
@@ -8,12 +7,9 @@ export class Api {
     _getServerReply(res) {
         if (res.ok) {
             return res.json();
-        } else {
-            return Promise.reject(`${res.status} ${res.statusText}`);
         }
+        return Promise.reject(`Ошибка: ${res.status}`);
     }
-
-
     getMyInfo() {
         return fetch(`${this._url}/users/me`,
             {
@@ -22,9 +18,9 @@ export class Api {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-            }).then(res => this._getServerReply(res));
+            })
+            .then(this._getServerReply)
     }
-
     getServerCards() {
         return fetch(`${this._url}/cards`,
             {
@@ -33,7 +29,7 @@ export class Api {
                 headers: {
                 },
             })
-            .then(res => this._getServerReply(res));
+            .then(this._getServerReply)
     }
 
     changeProfileData({ name, about }) {
@@ -41,11 +37,9 @@ export class Api {
             {
                 method: 'PATCH',
                 credentials: 'include',
-
                 headers: {
                     'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, about })
+                }, body: JSON.stringify({ name, about })
             })
             .then(this._getServerReply)
     }
@@ -70,8 +64,7 @@ export class Api {
                 credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, link })
+                }, body: JSON.stringify({ name, link })
             })
             .then(this._getServerReply)
     }
@@ -82,8 +75,7 @@ export class Api {
                 method: 'DELETE',
                 credentials: 'include',
                 headers: {
-                    'Content-Type': 'application/json',
-                },
+                }
             })
             .then(this._getServerReply)
     }
@@ -123,7 +115,7 @@ export class Api {
 
 const api = new Api
     ({
-        url: BASE_URL,
+        url: "https://api.shishkinovich.nomoredomains.work",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
