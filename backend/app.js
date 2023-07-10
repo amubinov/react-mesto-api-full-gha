@@ -17,6 +17,8 @@ app.use(cors({
     'https://localhost:3001',
     'http://localhost:3001',
     'http://localhost:3000',
+    'https://localhost:3002',
+    'http://localhost:3002',
     'https://api.shishkinovich.nomoredomains.work',
     'http://api.shishkinovich.nomoredomains.work',
     'https://shishkinovich.nomoreparties.sbs',

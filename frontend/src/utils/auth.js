@@ -35,7 +35,11 @@ export const login = (email, password) => {
     sameSite: 'none',
   })
     .then(getServerReply)
-
+    .then((data) => {
+      localStorage.setItem('userId', data._id)
+      return data;
+    }
+    )
 };
 
 export const checkToken = () => {
