@@ -8,8 +8,8 @@ import AddPlacePopup from "./AddPlacePopup";
 import ConfirmDeletePopup from "./ConfirmDeletePopup";
 import ImagePopup from './ImagePopup';
 import { CurrentUserContext, currentUserInfo } from "../contexts/CurrentUserContext";
-import api from "../utils/Api";
-import * as auth from '../utils/Auth'
+import api from "../utils/api";
+import * as auth from '../utils/auth'
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';
 import Register from './Register';
